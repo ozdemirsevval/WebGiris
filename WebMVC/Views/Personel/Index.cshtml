@@ -1,0 +1,81 @@
+﻿@model PersonelInsertVM
+
+<form asp-action="Index" asp-controller="Personel" method="post">
+    <h4>Hesap Bilgileriniz</h4>
+    <p>
+        <label asp-for="@Model.KullaniciAdi">Kullanici Adi</label>
+        <input asp-for="KullaniciAdi" />
+        <span style ="color: red;" asp-validation-for="KullaniciAdi"></span>
+    </p>
+    <p>
+        <label asp-for="Password">Password </label>
+        <input asp-for="Password" name="password" id="password" required>
+        <span style="color: red;" asp-validation-for="Password""></span>
+
+    </p>
+    <p>
+        <label for="email">Email </label>
+        <input type="email" name="email" id="email" placeholder="biris@gmail.com" required>
+    </p>
+    <p>
+        <label for="dtrh">Dogum Tarihi </label>
+        <input type="date" name="dtrh" id="dtrh" max="2006-01-01" min="1950-01-01" value="2000-01-01">
+    </p>
+    <h4>Kisisel Bilgileriniz</h4>
+    <p>
+        <label for="ad">Adiniz</label>
+        <input type="text" name="ad" id="ad">
+    </p>
+    <p>
+        <label for="soyad">Soyadiniz</label>
+        <input type="text" name="soyad" id="soyad">
+    </p>
+    <p>
+        <label for="tel">Gsm</label>
+        <input type="tel"
+               name="tel"
+               id="tel"
+               placeholder="(532) 333 44 55"
+               pattern="[0-9]{3} [0-9]{3} [0-9]{4}$">
+    </p>
+    <p>
+        <label for="sehir">Sehir</label>
+        <select name="sehir" id="sehir">
+            <option value="1">Adana</option>
+            <option value="6">Ankara</option>
+            <option value="34" selected>Istanbul</option>
+            <option value="35">Izmir</option>
+            <option value="67" disabled>Zonguldak</option>
+        </select>
+    </p>
+    <p>
+        <label for="Gelir">Geliriniz</label>
+        <input type="number" name="Gelir" id="Gelir" min="17002" max="500000">
+    </p>
+    <p>
+        <label for="cinsiyet">Cinsiyet:</label>
+        <input type="radio" name="cinsiyet" id="cinsiyet" value="erkek"> Erkek
+        <input type="radio" name="cinsiyet" id="cinsiyet" value="kadin"> Kadin
+
+    </p>
+    <p>
+        <h4>Hobileriniz</h4>
+        <input type="checkbox" name="hobiler1" id="hobiler1" value="sinema"> <label for="hobiler1">Sinema</label>
+        <input type="checkbox" name="hobiler2" id="hobiler2" value="gezmek"><label for="hobiler2">Gezmek</label>
+        <input type="checkbox" name="hobiler3" id="hobiler3" value="Spor"><label for="hobiler3">Spor</label>
+        <input type="checkbox" name="hobiler4" id="hobiler4" value="Kitap"><label for="hobiler4">Kitap Okumak</label>
+        <input type="checkbox" name="hobiler5" id="hobiler5" value="Treking"><label for="hobiler5">Treking</label>
+
+    </p>
+    <input type="hidden" name="id" id="id" value="5">
+    <input type="submit" value="Kaydet">
+    <button type="button" id="kaydet2" onclick="formuKontrolEt()">Kaydet 2</button>
+    <button type="button" onclick="elemanlariBastir()">Html Children </button>
+    <button type="reset">Reset</button>
+</form>
+
+@section Scripts 
+{
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
