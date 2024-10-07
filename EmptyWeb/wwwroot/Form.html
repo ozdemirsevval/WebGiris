@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Bilgilerinizi Eksiksiz Giriniz</h1>
+    <hr>
+    <form action="http://localhost" method="post" >
+        <h4>Hesap Bilgileriniz</h4>
+        <p>
+             <label for="username">Kullanici Adi</label> 
+            <input type="text" name="username" id="username" required>
+        </p>
+        <p>
+            <label for="password">Password </label> 
+           <input type="password" name="password" id="password" required>
+       </p>
+       <p>
+        <label for="email">Email </label> 
+        <input type="email" name="email" id="email" placeholder="biris@gmail.com" required>
+        </p>
+        <p>
+            <label for="dtrh">Dogum Tarihi </label> 
+            <input type="date" name="dtrh" id="dtrh" max="2006-01-01" min="1950-01-01" value="2000-01-01">
+        </p>
+        <h4>Kisisel Bilgileriniz</h4>
+        <p>
+            <label for="ad">Adiniz</label>
+            <input type="text" name="ad" id="ad">
+        </p>
+        <p>
+            <label for="soyad">Soyadiniz</label>
+            <input type="text" name="soyad" id="soyad">
+        </p>
+        <p>
+            <label for="tel">Gsm</label>
+            <input type="tel" 
+                    name="tel" 
+                        id="tel" 
+                        placeholder="(532) 333 44 55"
+                        pattern="[0-9]{3} [0-9]{3} [0-9]{4}$">
+        </p>
+        <p>
+            <label for="sehir">Sehir</label>
+            <select name="sehir" id="sehir">
+                    <option value="1">Adana</option>
+                    <option value="6">Ankara</option>
+                    <option value="34" selected>Istanbul</option>
+                    <option value="35">Izmir</option>
+                    <option value="67" disabled>Zonguldak</option>
+           </select>
+        </p>
+        <p>
+            <label for="Gelir">Geliriniz</label>
+            <input type="number" name="Gelir" id="Gelir" min="17002" max="500000">
+        </p>
+        <p>
+            <label for="cinsiyet">Cinsiyet:</label>
+            <input type="radio" name="cinsiyet" id="cinsiyet" value="erkek"> Erkek
+            <input type="radio" name="cinsiyet" id="cinsiyet" value="kadin"> Kadin
+
+        </p>
+        <p>
+            <h4>Hobileriniz</h4>
+            <input type="checkbox" name="hobiler" id="hobiler" value="sinema">Sinema
+            <input type="checkbox" name="hobiler" id="hobiler" value="gezmek">Gezmek
+            <input type="checkbox" name="hobiler" id="hobiler" value="Spor">Spor
+            <input type="checkbox" name="hobiler" id="hobiler" value="Kitap">Kitap Okumak
+            <input type="checkbox" name="hobiler" id="hobiler" value="Treking">Treking
+
+        </p>
+        <input type="hidden" name="id" id="id" value="5">
+        <input type="submit" value="Kaydet">
+        <button type="submit">Kaydet 2</button>
+        <button type="reset">Reset</button>
+    </form>
+    <script>
+        function phoneMask() { 
+    var num = $(this).val().replace(/\D/g,''); 
+    $(this).val(
+        0 + '(5' + num.substring(2,4) 
+        +(num.length>4?')':'') 
+        +(num.length>4?' '+num.substring(4,7):'') 
+        +(num.length>7?' '+num.substring(7,9):'') 
+        +(num.length>9?' '+num.substring(9,11):'') 
+    );
+}
+$('[type="tel"]').keyup(phoneMask);
+    </script>
+</body>
+</html>

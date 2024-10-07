@@ -1,0 +1,46 @@
+﻿
+@model PersonelViewModel
+    <form action="" method="post">
+        <h4>Hesap Bilgileriniz</h4>
+        <p>
+            <label for="username">Kullanici Adi</label>
+            <input asp-for="UserName">
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </p>
+        <p>
+            <label for="password">Password </label>
+            <input asp-for="Password">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </p>
+        <p>
+            <label for="repassword">Re Password </label>
+            <input asp-for="RePassword">
+            <span asp-validation-for="RePassword" class="text-danger"></span>
+        </p>
+        <p>
+            <label for="email">Email </label>
+            <input asp-for="Email" placeholder="biris@gmail.com">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </p>
+        <h4>Kisisel Bilgileriniz</h4>
+        <p>
+            <label for="ad">Adiniz</label>
+            <input asp-for="Ad">
+        </p>
+        <p>
+            <label for="soyad">Soyadiniz</label>
+            <input asp-for="Soyad">
+        </p>
+        <p>
+            <label for="tel">Gsm</label>
+            <input asp-for="Phone">
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </p>
+
+
+
+        <input type="hidden" name="id" id="id" value="5">
+        <input type="submit" value="Kaydet">
+        <button type="submit">Kaydet 2</button>
+        <button type="reset">Reset</button>
+    </form>

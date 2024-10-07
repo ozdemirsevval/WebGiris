@@ -1,0 +1,25 @@
+﻿@model List<Shipper>
+
+<table>
+    <thead>
+        <tr>
+            <td>Shipper ID</td>
+            <td>Company Name</td>
+            <td>Phone</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.ShipperId</td>
+                <td>@item.CompanyName</td>
+                <td>@item.Phone</td>
+            </tr>
+
+        }
+    </tbody>
+
+
+</table>

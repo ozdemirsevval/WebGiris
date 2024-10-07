@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="~/site.css" rel="stylesheet" />
+   
+    <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+   
+</head>
+<body>
+    <ul>
+        <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+        <li><a asp-action="Hakkimizda" asp-controller="Home">Hakkimizda</a> </li>
+        <li><a asp-action="Iletisim" asp-controller="Home">Iletisim</a> </li>
+        <li><a asp-action="Index" asp-controller="Personel">Personel Kayit</a> </li>
+        <li><a asp-action="PersonelListesi" asp-controller="Personel">Personel Listesi</a> </li>
+
+    </ul>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body{   
+    background-color:bisque;
+    font-family: monospace;
+}
+h1 {
+color:blue;
+font-style: oblique;
+}
+h2{
+    border: 2px solid powderblue;
+    padding: 10px;
+    padding-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+p{
+border: 2px solid powderblue;
+
+color:red;
+font-size: large;
+font-family: 'Courier New', Courier, monospace;
+font-style: italic;
+}
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+/* td{
+
+    border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px; 
+  
+}
+th{
+    border :2px solid red;
+    text-align: center;
+   
+} */
+th, td {
+    border-color: chartreuse;
+    /* border: 2px solid black; */
+    /* border-radius: 20px; */
+    padding: 8px; 
+  }
+  th{
+    color:  red;
+  }
+
+  /* tr:nth-child(even) {
+    background-color: #D6EEEE;
+  } */
+tr{
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {background-color: #D6EEEE;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: #111;
+        }
